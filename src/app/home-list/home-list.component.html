@@ -1,0 +1,13 @@
+<div id="home-list">
+    <h2>View All Homes</h2>
+    <table class="table" id="home-table">
+        <tr>
+            <th>Address</th>
+            <th>Price</th>
+        </tr>
+        <tr *ngFor="let home of homeList">
+            <td>{{ home.address }}</td>
+            <td>{{ home.price }}</td>
+        </tr>
+    </table>
+</div>

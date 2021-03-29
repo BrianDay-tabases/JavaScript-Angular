@@ -1,0 +1,28 @@
+<div> 
+    <h2>Add Home</h2>
+    <form (ngSubmit)="save(); homeForm.reset();" id="new-home" #homeForm>
+        <div class="form-group"> <!--styling for the input boxes-->
+            <label for="address">Address</label>
+            <input
+                [(ngModel)]="homeToSave.address" 
+                name="address"  
+                class="form-control" 
+                id="address" 
+                type="text" 
+                />
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input 
+                [(ngModel)]="homeToSave.price" 
+                name="price" 
+                class= "form-control" 
+                id="price" 
+                type="number" 
+                />
+        </div>
+        <div>
+            <input class="btn btn-primary submit-button" type="submit" value="Save" /> <!--The first btn creates it, the second btn-primary is for bootstrap, and the submit-button is for our own styling from the top of this code-->
+        </div>
+    </form>
+</div>
